@@ -14,11 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/dbconn',function(){
     return view('dbconn');
 });
-
-
+Route::get('/club-socioculturel', function () {
+    return view('index');;
+    })->name('socioculturel');
+Route::get('/club-it', function () {
+    return view('index');
+    })->name('it');
+Route::get('/club-citoyennete-environnement', function () {
+    return view('index');
+    })->name('citoyennete');
+Route::get('/nous-rejoindre', function () {
+    return view('index');
+    })->name('nous_rejoindre');
