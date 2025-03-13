@@ -17,9 +17,8 @@
         </div>
         <h1>ClubSpace</h1>
         <nav>
-            <a href="{{-- {{ route('socioculturel') }} --}}">Club Socioculturel</a>
-            <a href="{{-- {{ route('sportif') }} --}}">Club IT</a>
-            <a href="{{-- {{ route('citoyennete') }} --}}">Club Citoyenneté & Environnement</a>
+            <a href="{{-- {{ route('clubs') }} --}}">Nos Clubs</a>
+            <a href="{{-- {{ route('events') }} --}}">Events</a>
             <a href="{{-- {{ route('nous_rejoindre') }} --}}">Nous Rejoindre</a>
         </nav>
     </header>
@@ -35,7 +34,7 @@
         </div>
 
     </div>
-
+    <h2>Nos clubs</h2>
     <!-- Cartes des clubs -->
     <div class="cards">
         <!-- Club Socioculturel -->
@@ -71,12 +70,12 @@
 
     <footer>
         <nav>
-            <a href="{{-- {{ route('socioculturel') }} --}}">Club Socioculturel</a> |
-            <a href="{{-- {{ route('sportif') }} --}}">Club IT</a> |
-            <a href="{{-- {{ route('citoyennete') }} --}}">Club Citoyenneté & Environnement</a> |
-            <a href="{{-- {{ route('nous_rejoindre') }} --}}">Nous Rejoindre</a>
+            |<a href="{{-- {{ route('clubs') }} --}}">Nos Clubs</a>|
+            <a href="{{-- {{ route('events') }} --}}">Events</a>|
+            <a href="{{-- {{ route('nous_rejoindre') }} --}}">Nous Rejoindre</a>|
+
         </nav>
-        <p>&copy; 2025 ClubSpace - Tous droits réservés</p>
+        <p>| &copy; 2025 ClubSpace - Tous droits réservés |</p>
     </footer>
 
     <script src="{{ asset('js/slider.js') }}"></script>

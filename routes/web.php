@@ -20,15 +20,12 @@ Route::get('/', function () {
 Route::get('/dbconn',function(){
     return view('dbconn');
 });
-Route::get('/club-socioculturel', function () {
+Route::get('/clubs', function () {
     return view('index');;
-    })->name('socioculturel');
-Route::get('/club-it', function () {
+    })->name('clubs');
+Route::get('/events', function () {
     return view('index');
-    })->name('it');
-Route::get('/club-citoyennete-environnement', function () {
-    return view('index');
-    })->name('citoyennete');
+    })->name('events');
 Route::get('/nous-rejoindre', function () {
     return view('index');
     })->name('nous_rejoindre');

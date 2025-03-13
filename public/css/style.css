@@ -12,9 +12,12 @@ body {
 }
 
 h1 {
+    align-content: center;
+    display: inline-block;
+}
+h2 {
     align-content: center
 }
-
 header {
     display: flex;
     justify-content: space-between;
