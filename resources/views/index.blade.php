@@ -23,6 +23,17 @@
             <a href="{{ route('nous_rejoindre') }}">Nous Rejoindre</a>
         </nav>
     </header>
+     <!-- Slider -->
+     <div class="slider">
+        <img src="{{ asset('images/scroll/imgit.jpg') }}" alt="Image 1" class="slide active">
+        <img src="{{ asset('images/scroll/imgspr.jpg') }}" alt="Image 2" class="slide">
+        <img src="{{ asset('images/scroll/ingenvr.jpg') }}" alt="Image 3" class="slide">
+        <div class="carousel-text">
+            <h5 class="text-scrl-1">Sous-titre ici</h5>
+            <h3 class="text-scrl-2">Texte principal ici</h3>
+        </div>
+
+
 
     <section class="intro">
         <h2>Découvrez nos clubs et événements</h2>

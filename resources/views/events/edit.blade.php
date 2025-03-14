@@ -38,8 +38,19 @@
             </div>
 
             <div>
+            <label for="start_time">Heure de début</label>
+            <input type="time" name="start_time" id="start_time" value="{{ old('start_time') }}" required>
+            </div>
+           
+
+            <div>
                 <label for="end_date">Date de fin</label>
                 <input type="date" name="end_date" id="end_date" value="{{ old('end_date', $event->end_date) }}" required>
+            </div>
+
+            <div>
+            <label for="end_time">Heure de fin</label>
+            <input type="time" name="end_time" id="end_time" value="{{ old('end_time') }}" required>
             </div>
 
             <div>
