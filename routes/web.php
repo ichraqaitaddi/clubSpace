@@ -13,24 +13,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/dbconn',function(){
-    return view('dbconn');
-});
-
-// Route pour le club socioculturel
-Route::get('/club-socioculturel', function () {
+// Route pour les clubs
+Route::get('/clubs', function () {
     return view('index');
-})->name('socioculturel');
-
-// Route pour le club IT (nommée 'sportif')
-Route::get('/club-it', function () {
-    return view('index');
-})->name('sportif');
-
-// Route pour le club Citoyenneté et Environnement
-Route::get('/club-citoyennete-environnement', function () {
-    return view('index');
-})->name('citoyennete');
+})->name('clubs');
 
 // Route pour la page "Nous rejoindre"
 Route::get('/nous-rejoindre', function () {
