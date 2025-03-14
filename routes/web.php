@@ -22,6 +22,9 @@ Route::get('/clubs', function () {
 Route::get('/nous-rejoindre', function () {
     return view('index');
 })->name('nous_rejoindre');
+Route::get('/socioculturel', [YourController::class, 'method'])->name('socioculturel');
+Route::get('/sportif', [YourController::class, 'method'])->name('sportif');
+Route::get('/citoyennete', [YourController::class, 'citoyennete'])->name('citoyennete');
 
 // Routes pour les événements
 Route::get('/events', [EventController::class, 'index'])->name('events.index');  // Afficher la liste des événements
