@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/message', function () {
     return response()->json(['message' => 'Hello from Laravel!']);
 });
-
-
+Route::apiResource('events', EventController::class);
+Route::put('/events/{id}', [EventController::class, 'update']);
+Route::delete('/events/{id}', [EventController::class, 'destroy']);
