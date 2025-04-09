@@ -17,13 +17,14 @@
         </div>
         <h1>ClubSpace</h1>
         <nav>
-            |<a href="{{-- {{ route('clubs') }} --}}">Nos Clubs</a>|
+            <a href="{{  route('index') }}">Accueil</a>|
+            <a href="{{  route('homeClub.index') }}">Nos Clubs</a>|
             <a href="{{ route('events.index') }}">Events</a>|
             <a href="{{-- {{ route('nous_rejoindre') }} --}}">Nous Rejoindre</a>|
         </nav>
     </header>
 
-    <!-- Slider -->
+    <!-- Slider 
     <div class="slider">
         <img src="{{ asset('images/scroll/imgit.jpg') }}" alt="Image 1" class="slide active">
         <img src="{{ asset('images/scroll/imgspr.jpg') }}" alt="Image 2" class="slide">
@@ -33,7 +34,7 @@
             <h3 class="text-scrl-2">Texte principal ici</h3>
         </div>
 
-    </div>
+    </div> -->
     <section class="intro">
         <h2>Découvrez nos clubs et événements</h2>
         <p>Explorez les différents clubs et événements organisés par notre établissement. Rejoignez-nous et participez à nos activités sociales, sportives, et culturelles !</p>

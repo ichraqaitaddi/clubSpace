@@ -1,36 +1,50 @@
 <?php
 
+use App\Http\Controllers\HomeClubController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EventController;
 
 /*
-|--------------------------------------------------------------------------|
+|--------------------------------------------------------------------------
 | Web Routes
-|--------------------------------------------------------------------------|
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
 */
 
 Route::get('/', function () {
     return view('index');
 });
 
+/*Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';*/
+
+
+
+
+// Route pour la page d'accueil
+Route::get('/', function () {
+    return view('index');
+})->name('index');
+
 // Route pour les clubs
 Route::get('/clubs', function () {
-    return view('index');
-})->name('clubs');
+    return view('clubs.index');
+})->name('clubs.index');
 
-// Route pour la page "Nous rejoindre"
-Route::get('/nous-rejoindre', function () {
-    return view('index');
-})->name('nous_rejoindre');
-Route::get('/socioculturel', [YourController::class, 'method'])->name('socioculturel');
-Route::get('/sportif', [YourController::class, 'method'])->name('sportif');
-Route::get('/citoyennete', [YourController::class, 'citoyennete'])->name('citoyennete');
+Route::resource('clubs',App\Http\Controllers\ClubController::class);
 
-// Routes pour les événements
-Route::get('/events', [EventController::class, 'index'])->name('events.index');  // Afficher la liste des événements
-Route::get('/events/create', [EventController::class, 'create'])->name('events.create');  // Afficher le formulaire de création
-Route::post('/events', [EventController::class, 'store'])->name('events.store');  // Créer un événement
-Route::get('/events/{event}', [EventController::class, 'show'])->name('events.show');  // Afficher un événement spécifique
-Route::get('/events/{event}/edit', [EventController::class, 'edit'])->name('events.edit');  // Formulaire d'édition
-Route::put('/events/{event}', [EventController::class, 'update'])->name('events.update');  // Mettre à jour un événement
-Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('events.destroy');  // Supprimer un événement
+Route::get('/homeclub', [HomeClubController::class, 'index'])->name('homeClub.index');
+
