@@ -39,6 +39,8 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+
+
 // Route pour les clubs
 Route::get('/clubs', function () {
     return view('clubs.index');
@@ -48,3 +50,6 @@ Route::resource('clubs',App\Http\Controllers\ClubController::class);
 
 Route::get('/homeclub', [HomeClubController::class, 'index'])->name('homeClub.index');
 
+Route::get('/nav',function (){
+    return view('components.navbar.cart');
+});

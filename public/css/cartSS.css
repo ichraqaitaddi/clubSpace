@@ -1,0 +1,83 @@
+.prestations-section {
+    padding: 40px 0;
+    background: #f8f8f8;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.section-title {
+    color: #992824;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.clubsSwiper {
+    width: 100%;
+    padding: 0 50px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.prestation-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.prestation-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #992824;
+}
+
+.prestation-item h3 {
+    color: #992824;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+    color: #992824;
+    background: rgba(255,255,255,0.9);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+    background: #992824;
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .clubsSwiper {
+        padding: 0 30px 25px;
+    }
+    
+    .prestation-item h3 {
+        font-size: 14px;
+    }}

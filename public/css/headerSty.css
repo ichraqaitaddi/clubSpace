@@ -1,0 +1,210 @@
+ /* Styles globaux */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Serif Text', serif;
+}
+
+/* Section principale */
+.royal-slider-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    overflow: hidden;
+    background-color: #050304;
+}
+
+/* Conteneur Swiper */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Slide individuelle */
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Arrière-plan de la slide */
+.slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* Overlay sombre */
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 0, 1, 0.59);
+    z-index: 2;
+}
+
+/* Contenu du message */
+.message-content {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    color: white;
+}
+
+/* Conteneur du texte */
+.text-container {
+    background-color: rgba(153, 40, 36, 0.8);
+    padding: 40px;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Titre du message */
+.message-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 1.3;
+}
+
+/* Texte du message */
+.message-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #dbdbdb;
+}
+
+/* Navigation Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    width: 50px;
+    height: 50px;
+    background: rgba(153, 40, 36, 0.7);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(153, 40, 36, 1);
+    transform: scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Pagination Swiper */
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: white;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: #992824;
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .royal-slider-section {
+        height: 700px;
+    }
+    
+    .text-container {
+        max-width: 500px;
+        padding: 30px;
+    }
+    
+    .message-title {
+        font-size: 22px;
+    }
+    
+    .message-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .royal-slider-section {
+        height: 600px;
+        min-height: 600px;
+    }
+    
+    .text-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+    
+    .message-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .message-text {
+        font-size: 15px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .royal-slider-section {
+        height: 500px;
+        min-height: 500px;
+    }
+    
+    .message-title {
+        font-size: 18px;
+    }
+    
+    .message-text {
+        font-size: 14px;
+    }
+}
+
+/* Animation d'entrée */
+.swiper-slide-active .message-title {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.swiper-slide-active .message-text {
+    animation: fadeInUp 1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

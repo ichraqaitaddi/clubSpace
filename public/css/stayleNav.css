@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+/* Navbar Container */
+.navbar {
+    background-color: #050304;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    height: 100px;
+    
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+/* Animation 1: Pulse (battement de cœur) */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Animation 2: Rotation subtile */
+@keyframes subtleRotate {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Animation 3: Flottement */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Application des animations */
+.logo-img {
+    transition: all 1s ease; /* Transition douce pour les effets de survol */
+}
+
+/* Option 1: Animation permanente */
+.pulse-animation {
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* Option 2: Animation au survol */
+.hover-rotate:hover {
+    animation: subtleRotate 3s ease-in-out;
+}
+
+.hover-float:hover {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Option 3: Animation au chargement de la page */
+.load-spin {
+    animation: subtleRotate 1s ease-in-out 1;
+}
+
+
+/* Menu Principal */
+.main-menu {
+    display: flex;
+    list-style: none;
+}
+
+.main-menu li {
+    position: relative;
+}
+
+.main-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.main-menu li a:hover {
+    color: #fb362f;
+}
+
+/* Sous-menu */
+.sub-menu {
+    position: absolute;
+    background-color: black;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    border-top: 2px solid #ea0404;
+}
+
+.main-menu li:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-menu li a {
+    padding: 10px 20px;
+    font-size: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Menu Mobile */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .main-menu {
+        position: fixed;
+        top: 81px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background-color:black;
+        flex-direction: column;
+        transition: all 0.5s ease;
+        padding-top: 20px;
+    }
+    
+    
+    .main-menu.active {
+        left: 0;
+    }
+    
+    .sub-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        display: none;
+        padding-left: 20px;
+    }
+    
+    .main-menu li:hover .sub-menu {
+        display: block;
+    }
+    
+    .logo {
+        height: 60px;
+    }
+}

@@ -13,3 +13,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(changeSlide, 4000); // Changement toutes les 4 secondes
 });
+

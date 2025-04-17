@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClubSpace</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    
     <style>
         /* Fixer une hauteur uniforme pour toutes les cartes */
         .card {
@@ -42,19 +42,11 @@
 </head>
 
 <body>
+    <nav class="navbar">
+        @include('components.navbar.navbar')
+    </nav>
 
-    <header class="bg-purple text-white py-3 mb-5">
-        <div class="container d-flex justify-content-between align-items-center">
-            <img class="logo" src="{{ asset('images/logo.jpg') }}" alt="Logo" style="width: 50px;">
-            <h1>ClubSpace</h1>
-            <nav>
-                <a href="{{route('index')}}" class="text-white mx-2">Accueil</a>|
-                <a href="{{ route('homeClub.index') }}" class="text-white mx-2">Nos Clubs</a>|
-                <a href="{{ route('events.index') }}" class="text-white mx-2">Events</a>|
-                <a href="" class="text-white mx-2">Nous Rejoindre</a>
-            </nav>
-        </div>
-    </header>
+
 
     <div class="container mt-5">
         <h1 class="mb-4 text-center">Nos Clubs</h1>
@@ -79,14 +71,7 @@
 
 </body>
 <footer>
-    <nav>
-
-        |<a href="{{-- {{ route('clubs') }} --}}">Nos Clubs</a>|
-        <a href="{{-- {{ route('events') }} --}}">Events</a>|
-        <a href="{{-- {{ route('nous_rejoindre') }} --}}">Nous Rejoindre</a>|
-
-    </nav>
-    <p>| &copy; 2025 ClubSpace - Tous droits réservés |</p>
+   @include('components.navbar.footer')
 </footer>
 
 </html>
