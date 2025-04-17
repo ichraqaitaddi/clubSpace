@@ -20,7 +20,7 @@
             <a href="{{  route('index') }}">Accueil</a>|
             <a href="{{  route('homeClub.index') }}">Nos Clubs</a>|
             <a href="{{ route('events.index') }}">Events</a>|
-            <a href="{{-- {{ route('nous_rejoindre') }} --}}">Nous Rejoindre</a>|
+            <a href=" ">Se connecter</a>|
         </nav>
     </header>
 
