@@ -23,7 +23,7 @@
                 <ul class="main-menu" id="main-menu">
                     <li class="current-menu-item"><a href="{{  route('index') }}">ACCUEIL</a></li>
                     <li class="menu-item-has-children">
-                        <a href="la-fondation.html">Clubs</a>
+                        <a >Clubs</a>
                         <ul class="sub-menu">
                             <li><a href="{{  route('homeClub.index') }}">Nos Clubs</a></li>
                             <li><a href="{{ route('events.index') }}">Events</a></li>
