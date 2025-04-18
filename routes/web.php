@@ -1,8 +1,9 @@
 <?php
-
+use App\Http\Controllers\ClubController;
 use App\Http\Controllers\HomeClubController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MembreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-/*Route::get('/dashboard', function () {
+Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -29,7 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';*/
+
 
 
 
@@ -50,6 +51,17 @@ Route::resource('clubs',App\Http\Controllers\ClubController::class);
 
 Route::get('/homeclub', [HomeClubController::class, 'index'])->name('homeClub.index');
 
+
 Route::get('/nav',function (){
     return view('components.navbar.cart');
 });
+
+//pour afficher details dun club
+Route::get('/homeclub/{id}', [HomeClubController::class, 'show'])->name('homeClub.infoclub');
+
+//espace crud member
+Route::resource('members', MembreController::class);
+
+//login
+
+
