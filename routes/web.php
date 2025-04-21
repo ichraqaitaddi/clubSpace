@@ -63,5 +63,3 @@ Route::get('/homeclub/{id}', [HomeClubController::class, 'show'])->name('homeClu
 Route::resource('members', MembreController::class);
 
 //login
-
-

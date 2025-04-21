@@ -4,51 +4,51 @@
         
         <div class="swiper clubsSwiper">
             <div class="swiper-wrapper">
-                <!-- Club Sportif -->
                 <div class="swiper-slide">
                     <div class="prestation-item">
-                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" alt="Club Sportif" class="prestation-image">
-                        <h3>CLUB SPORTIF</h3>
+                        <img src="{{ asset('images/machinelearning.jpg') }}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;" />
+                        <h3>Machine learning</h3>
                     </div>
                 </div>
                 
-                <!-- Club Culturel -->
+          
                 <div class="swiper-slide">
                     <div class="prestation-item">
-                        <img src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" alt="Club Culturel" class="prestation-image">
-                        <h3>CLUB CULTUREL</h3>
+                        <img src="{{ asset('images/aiworkshop.jpg') }}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;" />
+                        <h3>AI Workshop</h3>
                     </div>
                 </div>
                 
-                <!-- Club Lecture -->
+          
                 <div class="swiper-slide">
                     <div class="prestation-item">
-                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" alt="Club Lecture" class="prestation-image">
-                        <h3>CLUB LECTURE</h3>
+                        <img src="{{ asset('images/useAi.jpg') }}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;" />
+                        <h3>How to use AI</h3>
                     </div>
                 </div>
                 
-                <!-- Club Musical -->
+               
                 <div class="swiper-slide">
                     <div class="prestation-item">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" alt="Club Musical" class="prestation-image">
-                        <h3>CLUB MUSICAL</h3>
+                        <img src="{{ asset('images/marchevert.jpg') }}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;" />
+                        <h3>Marche verte</h3>
                     </div>
                 </div>
                 
-                <!-- Club Loisirs -->
+         
                 <div class="swiper-slide">
                     <div class="prestation-item">
-                        <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd553?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" alt="Club Loisirs" class="prestation-image">
-                        <h3>CLUB LOISIRS</h3>
+                        <img src="{{ asset('images/cleanup.jpg') }}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;" />
+                        <h3>Clean Up day</h3>
                     </div>
                 </div>
                 
-                <!-- Aide -->
+          
                 <div class="swiper-slide">
                     <div class="prestation-item">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80" alt="Aide" class="prestation-image">
-                        <h3>AIDE</h3>
+                        <img src="{{ asset('images/donsang.jpg') }}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc;" />
+
+                        <h3>Don du sang</h3>
                     </div>
                 </div>
             </div>

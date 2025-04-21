@@ -56,7 +56,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                    
-                    <img src="{{ asset('storage/' . $club->image) }}" class="card-img-top" alt="{{ $club->nom }}"> 
+                    <img src="{{ asset('images/' . $club->image) }}" class="card-img-top" alt="{{ $club->nom }}">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">{{ $club->nom }}</h5>
                         <a href="{{ route('homeClub.infoclub', ['id' => $club->id]) }}" class="btn bg-dark text-light mt-auto">En savoir plus</a>

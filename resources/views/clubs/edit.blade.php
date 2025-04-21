@@ -39,7 +39,7 @@
                 <label for="image" class="form-label">Image (facultatif)</label>
                 <input type="file" class="form-control" id="image" name="image">
                 @if($club->image)
-                    <p class="mt-2">Image actuelle : <img src="{{ asset('storage/' . $club->image) }}" style="width: 100px;" alt="Image actuelle"></p>
+                    <p class="mt-2">Image actuelle : <img src="{{ asset('images/' . $club->image) }}" style="width: 100px;" alt="Image actuelle"></p>
                 @endif
             </div>
 

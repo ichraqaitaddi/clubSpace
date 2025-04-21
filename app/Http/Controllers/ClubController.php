@@ -27,19 +27,30 @@ class ClubController extends Controller
         return view('clubs.create',['clients'=>$clubs]);
 
     }
-    public function store(ClubRequest $request){
-        $formFields=$request->validated();
-        if($request->hasFile('image')){
-            $formFields['image']=$request->file('image')->store('club','public');
+   
+    public function store(Request $request)
+    {
+        $request->validate([
+            'nom' => 'required',
+            'description' => 'required',
+            'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+        ]);
+    
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $nomImage = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $nomImage);
+    
+            Club::create([
+                'nom' => $request->nom,
+                'description' => $request->description,
+                'image' => $nomImage, 
+            ]);
         }
-        Club::create($formFields);
-        return to_route('clubs.index');
-       
+    
+        return redirect()->route('clubs.index')->with('success', 'Club ajouté avec succès');
     }
-    public function destroy(Club $club){
-        $club->delete();
-        return to_route('clubs.index');
-    }
+    
 
     public function edit(Club $club)
 {
@@ -50,26 +61,34 @@ class ClubController extends Controller
 
 public function update(Request $request, Club $club)
 {
-    // Mise à jour des champs du club
     $club->nom = $request->input('nom');
     $club->description = $request->input('description');
 
-    // Gestion de l'image
     if ($request->hasFile('image')) {
-        // Supprimer l'ancienne image si elle existe
-        if ($club->image && file_exists(public_path('storage/' . $club->image))) {
-            unlink(public_path('storage/' . $club->image)); // Supprimer l'ancienne image
+        if ($club->image && file_exists(public_path('images/' . $club->image))) {
+            unlink(public_path('images/' . $club->image));
         }
-        
-        // Stocker la nouvelle image
-        $club->image = $request->file('image')->store('club', 'public');
+
+        $imageName = time() . '_' . uniqid() . '.' . $request->image->extension();
+
+        $request->image->move(public_path('images'), $imageName);
+
+        $club->image = $imageName;
     }
 
-    // Sauvegarde des modifications
     $club->save();
 
-    // Rediriger vers la liste des clubs avec un message de succès
-    return redirect()->route('clubs.index')->with('success', 'Le club a été mis à jour.');
+    return redirect()->route('clubs.index')->with('success', 'Le club a été mis à jour avec succès.');
 }
+
+public function destroy(Club $club)
+{
+    $club->delete();
+    return redirect()->route('clubs.index')->with('success', 'Le club a été supprimé avec succès.');
+}
+
+
+
+
 
 }
