@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeClubController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EvenementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +51,7 @@ Route::resource('clubs',App\Http\Controllers\ClubController::class);
 
 Route::get('/homeclub', [HomeClubController::class, 'index'])->name('homeClub.index');
 
-Route::get('/nav',function (){
-    return view('components.navbar.cart');
-});
+Route::resource('evenements', EvenementController::class);
+
+
+   

@@ -23,15 +23,15 @@
                 <ul class="main-menu" id="main-menu">
                     <li class="current-menu-item"><a href="{{  route('index') }}">ACCUEIL</a></li>
                     <li class="menu-item-has-children">
-                        <a href="la-fondation.html">Clubs</a>
+                        <a >Clubs</a>
                         <ul class="sub-menu">
                             <li><a href="{{  route('homeClub.index') }}">Nos Clubs</a></li>
-                            <li><a href="{{ route('events.index') }}">Events</a></li>
+                            <li><a href="{{ route('evenements.index') }}">Events</a></li>
                         </ul>
                     </li>
                     <li><a href="{{-- {{ route('nous_rejoindre') }} --}}">Nous Rejoindre</a></li>
                     <li class="menu-item-has-children">
-                        <a href="mission-et-valeurs.html">LOGIN ET INSCRIPTION</a>
+                        <a >LOGIN ET INSCRIPTION</a>
                         <ul class="sub-menu">
                             <li><a href="#">login</a></li>
                             <li><a href="#">INSCRIPTION</a></li>

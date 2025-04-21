@@ -27,7 +27,7 @@
                     <td>{{ $club->nom }}</td>
                     <td>{{ $club->description }}</td>
                     <td>
-                        <img src="{{ asset('storage/' . $club->image) }}" style="width: 100px;" alt="Image du club">
+                        <img src="{{ asset('storage/app/public' . $club->image) }}" style="width: 100px;" alt="Image du club">
                     </td>
                     <td>
                        
