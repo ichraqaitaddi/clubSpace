@@ -7,12 +7,14 @@
     <title>evenements</title>
 </head>
 <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
             <nav class="navbar">
                 @include('components.navbar.navbar')
             </nav>
 
-            @yield('content')
+           <section>
+               @yield('content')
+            
+        </section> 
 
 
             <footer >

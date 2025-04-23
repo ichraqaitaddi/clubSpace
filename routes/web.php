@@ -52,6 +52,6 @@ Route::resource('clubs',App\Http\Controllers\ClubController::class);
 Route::get('/homeclub', [HomeClubController::class, 'index'])->name('homeClub.index');
 
 Route::resource('evenements', EvenementController::class);
-
-
+ 
+Route::get('/env', [EvenementController::class, 'cartE'])->name('evenements.cartE');
    

@@ -26,7 +26,7 @@
                         <a >Clubs</a>
                         <ul class="sub-menu">
                             <li><a href="{{  route('homeClub.index') }}">Nos Clubs</a></li>
-                            <li><a href="{{ route('evenements.index') }}">Events</a></li>
+                            <li><a href="{{ route('evenements.cartE') }}">Events</a></li>
                         </ul>
                     </li>
                     <li><a href="{{-- {{ route('nous_rejoindre') }} --}}">Nous Rejoindre</a></li>

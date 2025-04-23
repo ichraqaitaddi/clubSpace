@@ -14,7 +14,11 @@ class EvenementController extends Controller
         $evenements = Evenement::with('club')->paginate(10);
         return view('evenements.index', compact('evenements'));
     }
-
+    public function cartE()
+    {
+        $evenements = Evenement::with('club')->paginate(10);
+        return view('evenements.cartE', compact('evenements'));
+    }
     public function create()
     {
         $clubs = Club::all();
