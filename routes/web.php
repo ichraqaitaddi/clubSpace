@@ -3,7 +3,11 @@ use App\Http\Controllers\ClubController;
 use App\Http\Controllers\HomeClubController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\MembreController;
+=======
+use App\Http\Controllers\EvenementController;
+>>>>>>> imadV
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +55,7 @@ Route::resource('clubs',App\Http\Controllers\ClubController::class);
 
 Route::get('/homeclub', [HomeClubController::class, 'index'])->name('homeClub.index');
 
+<<<<<<< HEAD
 
 Route::get('/nav',function (){
     return view('components.navbar.cart');
@@ -63,3 +68,9 @@ Route::get('/homeclub/{id}', [HomeClubController::class, 'show'])->name('homeClu
 Route::resource('members', MembreController::class);
 
 //login
+=======
+Route::resource('evenements', EvenementController::class);
+ 
+Route::get('/env', [EvenementController::class, 'cartE'])->name('evenements.cartE');
+   
+>>>>>>> imadV

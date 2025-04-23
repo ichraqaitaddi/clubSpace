@@ -9,9 +9,15 @@ class Club extends Model
 {
     use HasFactory;
     protected $fillable = ['nom', 'description', 'image'];
+<<<<<<< HEAD
 
     public function membres()
     {
         return $this->belongsToMany(Membre::class, 'club_membre', 'club_id', 'membre_id');
+=======
+    public function evenements()
+    {
+        return $this->hasMany(Evenement::class);
+>>>>>>> imadV
     }
 }
